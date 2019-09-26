@@ -12,16 +12,9 @@ Create table EMPLOYEE(ID int primary key,
  (2, 'Slava', 2, 0, 'Devops', 500),
  (3, 'Dima', 2, 0, 'Test', 500);
 --1
---ex1
 Select Distinct min(NAME) From EMPLOYEE
 Where DEPARTMENT_ID = 2
 Group By  POSITION
---ex2
-Select Distinct emp.NAME From EMPLOYEE emp
-Inner join EMPLOYEE emp2
-On emp.ID = emp2.ID
-Where emp.DEPARTMENT_ID = 2
-
 --2
 Select emp.NAME From EMPLOYEE emp
 Where emp.CHIEF_ID is Null AND 
